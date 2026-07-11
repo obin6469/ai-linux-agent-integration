@@ -46,7 +46,9 @@ Research and explanations
 
 Example:
 
-Explain this Linux service configuration.
+How can I create and mount a new partition from a newly added disk on Linux?
+<img width="948" height="304" alt="chatgpt CLI" src="https://github.com/user-attachments/assets/ee912a8d-9c5d-414a-bd8f-68a09c50579e" />
+
 Shell Genie
 
 Used for:
