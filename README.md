@@ -141,6 +141,7 @@ pipx runpip shell-genie install "click<8.2"
 shell-genie init
 # Select backend from 2 prompt 
 [openai-gpt-3.5-turbo/free-genie]:
+
 #enter openai api key
 
 # start shell-genie
