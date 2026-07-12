@@ -59,13 +59,15 @@ python3 -c "import openai; print(openai.__version__)"
 echo OPENAI_API_KEY="sk-proj-your_key_here"
 # Make API key permanent
 echo 'export OPENAI_API_KEY="your_api_key"' >> ~/.bashrc
+# Reload the shell
 source ~/.bashrc
 # verify
 echo $OPENAI_API_KEY
 # create chatgpt CLI application
 vi ~/chatgpt.py
-# chatgpt script
+# Example of a chatgpt script
 #!/usr/bin/env python3
+
 from openai import OpenAI
 
 client = OpenAI()
@@ -94,9 +96,23 @@ chmod +x ~/.local/bin/chatgpt
 # start chatgpt
 chatgpt
 <img width="942" height="249" alt="chatgpt CLI 1" src="https://github.com/user-attachments/assets/92c6635c-62b7-4fa2-a7d6-c4712334edea" />
+
 ############
 # Shell Genie
 ##############
+#Shell Genie is a terminal assistant that helps generate and explain Linux commands.
+# install pipx
+#check if is already installed
+pipx --version
+#installation 
+dnf install -y python3-pipx
+# enable pipx path
+python3 -m pipx ensurepath
+# reload shell
+source ~/.bashrc
+# verify 
+pipx --version
+
 
 # Installing Aider on AlmaLinux 10.1
 #EnvironmentOperating System: AlmaLinux 10.1
