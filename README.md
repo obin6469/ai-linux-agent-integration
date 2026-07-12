@@ -16,10 +16,15 @@
 Each AI agent runs with:
 
 #Dedicated Linux user account
+
 #Independent configuration
+
 #Separate credentials
+
 #Controlled project access
+
 #Installed AI CLI Agents
+
 #ChatGPT CLI
 
 # Used for
