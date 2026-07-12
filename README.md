@@ -12,7 +12,8 @@
 
 #The deployment follows an isolation-first approach:
 
-<img width="238" height="224" alt="Archtecture 1" src="https://github.com/user-attachments/assets/efd30581-21a3-4b66-96ca-03333601ab5d" />
+<img width="201" height="250" alt="Archtecture 2" src="https://github.com/user-attachments/assets/06c89482-43f9-4d64-994e-25765b517709" />
+
 
 
 # Each AI agent runs with:
@@ -192,7 +193,8 @@ pipx ensurepath
 source ~/.bashrc
 
 # Install Aider Using pipx
-# pipx is used to install Aider in an isolated virtual environment. This prevents dependency conflicts with other Python applications running on the server.
+
+#pipx is used to install Aider in an isolated virtual environment. This prevents dependency conflicts with other Python applications running on the server.
 
 # Install Aider:
 pipx install aider-chat
@@ -242,7 +244,7 @@ aider app.py
 ###############
 # Goose CLI
 ###############
-Goose is an AI agent designed for more autonomous workflows.
+#Goose is an AI agent designed for more autonomous workflows.
 
 Capabilities:
 
