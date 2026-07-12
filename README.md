@@ -10,6 +10,7 @@
 # Architecture
 
 #The deployment follows an isolation-first approach:
+
 <img width="238" height="224" alt="Archtecture 1" src="https://github.com/user-attachments/assets/efd30581-21a3-4b66-96ca-03333601ab5d" />
 
 
