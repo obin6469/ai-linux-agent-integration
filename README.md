@@ -244,145 +244,100 @@ aider app.py
 ###############
 # Goose CLI
 ###############
+
 #Goose is an AI agent designed for more autonomous workflows.
 
-Capabilities:
+# Create a separate Linux account
+useradd -m -s /bin/bash goose
 
-Project analysis
-Multi-step tasks
-Automation assistance
-Tool-based workflows
-Infrastructure support
+#add the user to sudoers file
 
-Installation follows a dedicated user model:
+usermod -aG wheel goose
 
-/home/goose
+#set the user password
 
-with independent configuration and credentials.
+passwd goose
+# create the project directory
+mkdir -p /home/goose/projects
 
-Security Design
+chown -R goose:goose /home/goose/projects
 
-AI agents can read and modify files, therefore isolation is essential.
+#switch to goose user
 
-Implemented practices:
+su - goose
 
-✅ Dedicated Linux users
-✅ No execution as root
-✅ Separate API credentials
-✅ Git-based change tracking
-✅ Controlled project directories
+# installation of goose
+curl -fsSL https://github.com/block/goose/releases/latest/download/install.sh | bash
 
-Recommended:
+#verify 
 
-/home/aider/projects
-/home/goose/projects
+goose --version
 
-Avoid providing access to:
+# Configure goose
 
-Private keys
-Password files
-Cloud credentials
-Sensitive configuration files
-Git Workflow
+#create goose config
 
-Git is used as a safety mechanism:
+mkdir -p ~/.config/goose
 
-Create checkpoint
-        ↓
-Request AI changes
-        ↓
-Review diff
-        ↓
-Commit changes
-        ↓
-Deploy
+#edit configuration
 
-Useful commands:
+vi ~/.config/goose/config.yaml
 
-git diff
-git status
-git commit
-Supported Use Cases
+#example of config
 
-These AI agents can assist with:
+provider: openai
 
-Development
-Python
-Java
-Go
-Rust
-C/C++
-JavaScript / TypeScript
-Infrastructure
-Linux administration
-Bash scripting
-Ansible
-Terraform
-Docker
-Kubernetes
-Documentation
-README files
-Technical guides
-Operational runbooks
-Troubleshooting procedures
-Strengths
-Productivity
+model: gpt-4.1
 
-Reduces time spent on:
+workspace:
 
-Writing repetitive code
-Searching documentation
-Creating scripts
-Explaining complex systems
-Knowledge Sharing
+  directory: /home/goose/projects
 
-Helps engineers:
+security:
 
-Understand unfamiliar code
-Learn new technologies
-Document environments
-Automation
+  isolated: true
 
-Useful for:
+# Configure OpenAI API Access
 
-Infrastructure tasks
-Maintenance scripts
-Deployment workflows
-Limitations
+# Configure the API key for the dedicated Aider user:
+export OPENAI_API_KEY="your_api_key"
 
-AI assistants require human validation.
+# To make the configuration persistent:
+echo 'export OPENAI_API_KEY="your_api_key"' >> ~/.bashrc
+source ~/.bashrc
 
-Potential risks:
+# Create automation workplace
 
-Incorrect code generation
-Unsafe configuration changes
-Wrong assumptions
-Increased API usage costs
+mkdir -p ~/projects/my-agent-task
 
-Best practices:
+cd ~/projects/my-agent-task
 
-Review all generated changes
-Use Git checkpoints
-Provide clear project context
-Avoid exposing secrets
-Future Enhancements
+#initialise git
 
-Planned improvements:
+git init
 
-Local LLM integration using Ollama
-MCP-based tool integration
-AI-assisted monitoring
-Automated infrastructure reviews
-CI/CD workflow integration
-Conclusion
+# Run goose CLI
+goose
 
-This project demonstrates a practical approach to deploying AI CLI agents on Linux servers using secure operating practices.
+<img width="949" height="348" alt="goose 1" src="https://github.com/user-attachments/assets/64ca5690-4fae-48da-ad06-cd6dd92dd0af" />
 
-By combining:
 
-User isolation
-Environment separation
-Git workflows
-AI-assisted development and operations
 
-AI tools can become reliable assistants for modern engineering and system administration workflows.    
+
+# Conclusion
+
+#This project demonstrates a practical approach to deploying AI CLI agents on Linux servers using secure operating practices.
+
+#By combining:
+
+#User isolation
+
+#Environment separation
+
+#Git workflows
+
+#AI-assisted development and operations
+
+#=>AI tools can become reliable assistants for modern engineering and system administration workflows.    
+
+########## 
