@@ -111,8 +111,11 @@ chatgpt
 #Shell Genie is a terminal assistant that helps generate and explain Linux commands.
 # install pipx
 #check if is already installed
+
 pipx --version
-#installation 
+
+#installation
+
 dnf install -y python3-pipx
 # enable pipx path
 python3 -m pipx ensurepath
@@ -120,6 +123,9 @@ python3 -m pipx ensurepath
 source ~/.bashrc
 # verify 
 pipx --version
+# install shell Genie
+
+
 
 
 # Installing Aider on AlmaLinux 10.1
