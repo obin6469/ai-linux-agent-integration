@@ -225,12 +225,17 @@ mkdir -p ~/projects
 git init
 # create a python file
 cat > app.py <<EOF
+
 def main():
+
     print("Hello world")
 
 if __name__ == "__main__":
+
     main()
+    
 EOF
+
 # start aider
 aider app.py
 ## Images from AlmaLinux 10.1
