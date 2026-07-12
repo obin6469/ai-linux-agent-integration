@@ -51,45 +51,91 @@ How can I create and mount a new partition from a newly added disk on Linux?
 
 Shell Genie
 
-Used for:
+# Installing Aider on AlmaLinux 10.1
+#EnvironmentOperating System: AlmaLinux 10.1
+#Shell: Bash
+#Python: Python 3.x
+#Package Manager: pipx
+#Version Control: Git
+#AI Provider: OpenAI API
 
-Linux command assistance
-Shell scripting help
-Command discovery
-Administration workflows
+# Create a Dedicated User for Aider
 
-Example:
+#To follow Linux administration best practices, Aider is installed under a dedicated user account. This isolates the AI development environment from other system users and Python applications.
 
-Find files larger than 1GB under /var.
-Aider CLI
+# Create the aider user
+sudo useradd -m -s /bin/bash aider
+# add user aider to sudoers file
+sudo usermod -aG wheel aider
+# Set a password if interactive login is required:
+sudo passwd aider
 
-Aider is an AI coding assistant integrated with Git workflows.
+# Switch to the Aider user:
+su - aider
 
-Installation:
+# Verify the user environment:
+id aider
 
+# Install required packages:
+sudo dnf install python3-pip pipx git -y
+
+# Configure the local Python application path:
+pipx ensurepath
+
+# Reload the shell:
+source ~/.bashrc
+
+# Install Aider Using pipx
+# pipx is used to install Aider in an isolated virtual environment. This prevents dependency conflicts with other Python applications running on the server.
+
+# Install Aider:
 pipx install aider-chat
 
-Benefits of using pipx:
+# Verify installation:
+aider --version
 
-Isolated Python environment
-No dependency conflicts
-Easy upgrades
-User-level installation
+# Configure OpenAI API Access
 
-Configuration:
+# Configure the API key for the dedicated Aider user:
+export OPENAI_API_KEY="your_api_key"
 
-/home/aider/.aider.conf.yml
+# To make the configuration persistent:
+echo 'export OPENAI_API_KEY="your_api_key"' >> ~/.bashrc
+source ~/.bashrc
 
-Capabilities:
+# Verify the variable:
 
-Code generation
-Refactoring
-Debugging
-Documentation
-Multi-file changes
-Git-aware workflows
-Goose CLI
+echo $OPENAI_API_KEY
+# start aider 
+# create a directory dedicated to your aider projects
+mkdir -p ~/projects
+# initiate Git
+git init
+# create a python file
+cat > app.py <<EOF
+def main():
+    print("Hello world")
 
+if __name__ == "__main__":
+    main()
+EOF
+# start aider
+aider app.py
+## Images from AlmaLinux 10.1
+<img width="483" height="329" alt="aider 2" src="https://github.com/user-attachments/assets/06589dc9-28ca-48ef-9ff5-6f6a7e9cdccf" />
+<img width="938" height="435" alt="aider 1" src="https://github.com/user-attachments/assets/6c717a00-2b3c-4e29-9558-5087f72bf65a" />
+
+# aider Capabilities:
+#Code generation
+#Refactoring
+#Debugging
+#Documentation
+#Multi-file changes
+#Git-aware workflows
+
+###############
+# Goose CLI
+###############
 Goose is an AI agent designed for more autonomous workflows.
 
 Capabilities:
