@@ -107,6 +107,7 @@ chatgpt
 ############
 # Shell Genie
 ##############
+
 #Shell Genie is a terminal assistant that helps generate and explain Linux commands.
 # install pipx
 #check if is already installed
