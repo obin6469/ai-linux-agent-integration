@@ -126,6 +126,13 @@ source ~/.bashrc
 # verify 
 pipx --version
 # install shell Genie
+pipx install shell-genie
+# verify 
+pipx list
+
+shell-genie --version
+
+
 
 
 
