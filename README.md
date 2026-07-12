@@ -1,6 +1,6 @@
 # ai-linux-agent-integration
 #Deployment and configuration of AI CLI agents on Linux servers using ChatGPT CLI, Shell Genie, Aider, and Goose CLI.
-#AI CLI Agents Deployment on Linux Servers
+# AI CLI Agents Deployment on Linux Servers
 
 # Overview
 
