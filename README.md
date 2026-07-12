@@ -158,7 +158,7 @@ shell-genie ask "analyse fstab file"
 # Installing Aider
 ######
 
-#EnvironmentOperating System: AlmaLinux 10.1
+#EnvironmentOperating System: Linux
 
 #Shell: Bash
 
