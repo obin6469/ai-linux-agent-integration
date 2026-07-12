@@ -131,18 +131,37 @@ pipx install shell-genie
 pipx list
 
 shell-genie --version
+# Initial error:
+#TypeError: Secondary flag is not valid for non-boolean flag.
 
+#run this command to fix typer/click compatibility issue
 
+pipx runpip shell-genie install "click<8.2"
+# initialise shell-genie
+shell-genie init
+# Select backend from 2 prompt 
+[openai-gpt-3.5-turbo/free-genie]:
+#enter openai api key
 
+# start shell-genie
+shell-genie ask "analyse fstab file"
 
+<img width="564" height="214" alt="shell-genie 1" src="https://github.com/user-attachments/assets/d8d11230-6564-4d37-8ccc-9a2315d127d3" />
 
+#################
+# Installing Aider
+######
 
-# Installing Aider on AlmaLinux 10.1
 #EnvironmentOperating System: AlmaLinux 10.1
+
 #Shell: Bash
+
 #Python: Python 3.x
+
 #Package Manager: pipx
+
 #Version Control: Git
+
 #AI Provider: OpenAI API
 
 # Create a Dedicated User for Aider
