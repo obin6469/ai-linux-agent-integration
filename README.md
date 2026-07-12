@@ -53,7 +53,7 @@ How can I create and mount a new partition from a newly added disk on Linux?
 #Example API key format:sk-proj-xxxxxxxxxxxxxxxx
 
 ################
-Chatgpt CLI
+# Chatgpt CLI
 ################
 # install pip and python
 dnf install -y python3-pip
