@@ -224,6 +224,7 @@ mkdir -p ~/projects
 # initiate Git
 git init
 # create a python file
+
 cat > app.py <<EOF
 
 def main():
