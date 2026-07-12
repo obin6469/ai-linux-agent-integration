@@ -31,9 +31,13 @@
 #ChatGPT CLI
 
 # Used for
+
 #Technical assistance
+
 #Documentation generation
+
 #Troubleshooting
+
 #Research and explanations
 
 Example:
