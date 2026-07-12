@@ -99,6 +99,7 @@ while True:
 mkdir ~/.local/bin
 # install chatgpt CLI command
 mv ~/chatgpt.py ~/.local/bin/chatgpt
+
 chmod +x ~/.local/bin/chatgpt
 # start chatgpt
 chatgpt
